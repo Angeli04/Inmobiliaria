@@ -1,0 +1,26 @@
+@* Views/Shared/_Alerts.cshtml *@
+@{
+    var success = TempData["Success"] as string;
+}
+
+@if (!string.IsNullOrEmpty(success))
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @success
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger" role="alert">
+        <strong>Hay errores en el formulario.</strong>
+        @* Opcional: listar los errores *@
+        <ul class="mb-0">
+            @foreach (var e in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <li>@e.ErrorMessage</li>
+            }
+        </ul>
+    </div>
+}

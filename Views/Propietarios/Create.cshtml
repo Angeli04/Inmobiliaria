@@ -1,0 +1,30 @@
+@model Propietario
+@{
+    ViewData["Title"] = "Crear propietario";
+}
+
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">Nuevo propietario</h5>
+        <a asp-action="Index" class="btn btn-secondary btn-sm">Volver</a>
+    </div>
+    <div class="card-body">
+        @await Html.PartialAsync("_Alerts")
+
+        <form asp-action="Create" method="post" novalidate>
+            @Html.AntiForgeryToken()
+            <div class="mb-3">
+                @await Html.PartialAsync("_PropietarioForm", Model)
+            </div>
+
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-success">Crear</button>
+                <a asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

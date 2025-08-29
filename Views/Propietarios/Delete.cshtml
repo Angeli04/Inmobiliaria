@@ -1,0 +1,36 @@
+@model Propietario
+@{
+    ViewData["Title"] = "Eliminar propietario";
+}
+
+<div class="card border-danger">
+    <div class="card-header d-flex justify-content-between align-items-center bg-light">
+        <h5 class="mb-0 text-danger">Eliminar - @Model?.Nombre @Model?.Apellido</h5>
+        <a asp-action="Index" class="btn btn-secondary btn-sm">Volver</a>
+    </div>
+    <div class="card-body">
+        @await Html.PartialAsync("_Alerts")
+
+        <p>¿Seguro que querés eliminar este propietario?</p>
+
+        <dl class="row">
+            <dt class="col-sm-3">DNI</dt>
+            <dd class="col-sm-9">@Model?.DNI</dd>
+
+            <dt class="col-sm-3">Nombre</dt>
+            <dd class="col-sm-9">@Model?.Nombre</dd>
+
+            <dt class="col-sm-3">Apellido</dt>
+            <dd class="col-sm-9">@Model?.Apellido</dd>
+        </dl>
+
+        <form asp-action="Delete" method="post">
+            @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="Id" />
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-danger">Sí, eliminar</button>
+                <a asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>

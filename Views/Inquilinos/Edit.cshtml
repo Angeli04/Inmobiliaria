@@ -1,0 +1,32 @@
+@model Inmobiliaria.Models.Inquilino
+@{
+    ViewData["Title"] = "Editar inquilino";
+}
+
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">Editar - @Model?.Nombre @Model?.Apellido</h5>
+        <a asp-action="Index" class="btn btn-secondary btn-sm">Volver</a>
+    </div>
+    <div class="card-body">
+        @await Html.PartialAsync("_Alerts")
+
+        <form asp-action="Edit" method="post" novalidate>
+            @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="IdInquilino" />
+
+            <div class="mb-3">
+                @await Html.PartialAsync("_InquilinoForm", Model)
+            </div>
+
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                <a asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
