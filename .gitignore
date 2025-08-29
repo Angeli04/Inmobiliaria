@@ -1,0 +1,101 @@
+# === Visual Studio / .NET ===
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build outputs
+bin/
+obj/
+publish/
+out/
+
+# Rider
+.idea/
+*.sln.iml
+
+# VS Code
+.vscode/
+
+# Logs, debug files
+*.log
+logs/
+
+# NuGet
+*.nupkg
+.packages/
+.nuget/
+
+# npm / frontend (si llegas a usar)
+node_modules/
+wwwroot/lib/
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# User secrets (no subir usersecrets.json)
+secrets.json
+secrets.*
+appsettings.Development.json
+appsettings.*.local
+
+# env
+.env
+.env.*.local
+
+# Database / local data files (no subir bases de datos locales)
+*.mdf
+*.ldf
+*.sqlite
+*.db
+*.db-journal
+
+# Publish and deployment artefacts
+publish/
+deploy/
+*.zip
+
+# Coverage & test result files
+coverage/
+TestResults/
+*.coverage
+*.coveragexml
+*.trx
+
+# JetBrains ReSharper
+_ReSharper*/
+*.DotSettings.user
+
+# IIS Express
+IISExpress/
+IISExpress/*.log
+applicationhost.config
+
+# Certificates and keys
+*.pfx
+*.key
+*.pem
+
+# Generated files / tooling
+*.generated.cs
+obj/**/generated/*
+
+# OneDrive / temporary sync files (sencillo)
+~$*
+~*.tmp
+~*.one
+*.tmp
+
+# Docker
+docker-compose.override.yml
+
+# Git LFS pointer files (si usas LFS)
+*.psd
+*.ai
+
+# Optional: ignore compiled Razor views if generated during build
+Razor/**/bin/
+Razor/**/obj/
