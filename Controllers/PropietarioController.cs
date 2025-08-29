@@ -2,10 +2,6 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Linq;
 
-// ajusta estos namespaces a los de tu proyecto
-// using TuProyecto.Data; 
-// using TuProyecto.Models;
-
 public class PropietariosController : Controller
 {
     private readonly PropietarioRepositorio _repo;

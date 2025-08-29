@@ -99,3 +99,4 @@ C:\Users\ismit\OneDrive\Escritorio\Universidad\.NET\Inmobiliaria\bin\Debug\net9.
 C:\Users\ismit\OneDrive\Escritorio\Universidad\.NET\Inmobiliaria\bin\Debug\net9.0\MySqlConnector.dll
 C:\Users\ismit\OneDrive\Escritorio\Universidad\.NET\Inmobiliaria\obj\Debug\net9.0\Inmobiliaria.csproj.AssemblyReference.cache
 C:\Users\ismit\OneDrive\Escritorio\Universidad\.NET\Inmobiliaria\obj\Debug\net9.0\Inmobili.2D736105.Up2Date
+C:\Users\ismit\OneDrive\Escritorio\Universidad\.NET\Inmobiliaria\obj\Debug\net9.0\Inmobiliaria.sourcelink.json
